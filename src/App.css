@@ -1,0 +1,51 @@
+/* .head{
+    background: red;
+    background-image: linear-gradient(#1d1d1d, #181818);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 199;
+} */
+
+.app{
+    width: 100%;
+    height: 100%;
+}
+.app::before{
+    content: "";
+    position: absolute;
+    top: -1px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08)
+}
+.app .shop-tab {
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    z-index: 200;
+    background:#fff;
+    box-shadow: 0 -11px 32px rgba(0, 0, 0, 0.08)
+
+}
+.app .shop-tab .tab-item{
+    flex: 1 1 100%;
+    text-align: center;
+}
+.nav-link {
+    display: block;
+    text-decoration: none;
+    color: #9a9a9a;
+}
+.nav-link.active {
+    color: black;
+    background-color: #e2e2e2;
+    border-radius: 50%
+}
+.nav-link img{
+    width: 27px;
+    height: 27px;
+}
