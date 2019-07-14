@@ -3,7 +3,7 @@ import { Link, Route } from 'react-router-dom'
 
 
 import * as api from '../../api/api'
-import axios from 'axios'
+import { get } from '../../api/axios'
 
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
@@ -66,10 +66,11 @@ class User extends Component {
             }
         })
         console.log(api.default.floorsUrl)
-       await axios.get('/?json=true')
-            .then(res => {
-                console.log(res)
-            })
+    //    await axios.get('/?json=true')
+    //         .then(res => {
+    //             console.log(res)
+    //         })
+         let data = await get('https://resource.smartisan.com/marketing/mobile/index_fac3d2920911d9e19ea7b4af2814ca9f.json')
     }
 }
 
