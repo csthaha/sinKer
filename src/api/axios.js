@@ -3,8 +3,9 @@ import axios from 'axios'
 
 
 
-axios.default.timeout === 1000;
-
+// axios.default.timeout === 1000;
+axios.default.datatype = 'jsonp'
+axios.default.baseURL = '/api'
 
 //拦截器
 axios.interceptors.response.use((res) => {
@@ -18,10 +19,10 @@ axios.interceptors.response.use((res) => {
     return Promise.reject(error)
 })
 
-export function fetchGet(url, param) {
+export function get(url, param) {
     return new Promise((resolve,reject) => {
         axios.get(url, {
-            params: param
+            params: param,
         })
         .then(response => {
             resolve(response.data)
@@ -33,3 +34,4 @@ export function fetchGet(url, param) {
         })
     })
 }
+

@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+
+import '../../base.styl'
+import './Cart.styl'
+
 class Cart extends Component {
     state = {}
     render() {
         return (
-            <div>
-                Cart
+            <div className="Cart">
+                <div className="head">
+                    购物车
+                </div>
             </div>
         )
     }
