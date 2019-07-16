@@ -49,4 +49,234 @@
                         width 100%
                         height 100%
                         border-radius 14px
+
+    .hotGoods
+        position relative
+        box-shadow 0 5px 13px rgba(0,0,0,.1)
+        margin-bottom 6px         
+        background-color #fff
+        display block
+        .hotGoods-head
+            display flex
+            padding 0 .6em
+            margin-top .6rem
+            justify-content space-between
+            align-items center
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            .head-title
+                display block
+                margin-block-start 0.83em
+                margin-block-end 0.83em
+                margin-inline-start 0px
+                margin-inline-end 0px
+        .hotGoods-good
+            overflow hidden  
+            padding-left 0
+            padding-right 0
+            padding-bottom 0
+            padding .9rem .6rem
+            .ul
+                display flex
+                align-content center
+                justify-content space-between
+                flex-wrap nowrap
+                padding 0 .6rem
+                overflow-y hidden
+                overflow-x auto
+                .good
+                    width 36%
+                    flex-shrink .4rem
+                    position relative
+                    .good-msg
+                        padding-right: 10px
+                        .img-good
+                            display block
+                            position relative
+                            padding-top 100%
+                            border-radius .2rem
+                            border: 1px solid #f0f0f0
+                            
+                            img 
+                                position absolute
+                                left 0
+                                top 0
+                                width 100%
+                                height 100%
+                                border-radius .2rem
+                        .text-good
+                            margin 0 auto
+                            padding .4rem .6rem .9rem
+                            h4  
+                                overflow hidden
+                                text-overflow ellipsis
+                                white-space nowrap
+                                margin 0
+                                font-size .6rem
+                                color #333
+                            .good-desc
+                                width 120%
+                                transform-origin 0 50%
+                                margin-top .3rem
+                                overflow hidden
+                                text-overflow ellipsis
+                                white-space nowrap
+                                font-size .5rem
+                                line-height 1.2
+                                color #7f7f7f
+                                min-height .6rem
+                            .good-price
+                                color red
+    .clothes-package
+        position relative
+        box-shadow 0 5px 13px rgba(0,0,0,.1)
+        margin-bottom 6px
+        background #fff
+        .cp-head
+            display flex
+            justify-content space-between
+            align-items center
+            padding 0 .6em
+            margin-top .6rem
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            .cp-title
+                display block
+                margin-block-start 0.83em
+                margin-block-end 0.83em
+                margin-inline-start 0px
+                margin-inline-end 0px
+        .cp-good
+            .cp-ul
+                margin-block-start 1em
+                margin-block-end 1em
+                margin-inline-start 0px
+                margin-inline-end 0px
+                // padding-inline-start 40px    
+                .cp-content
+                    border-bottom 1px solid #eee
+                    .cp-msg
+                        display flex
+                        padding .6rem
+                        position relative
+                        align-items center
+                        .cp-img
+                            img 
+                                width 6.05rem
+                                height 6.05rem
+                                box-sizing border-box
+                                flex-shrink 0
+                                margin-right 1.55rem
+                                border-style none     
+                        .cp-text
+                            position relative
+                            overflow hidden
+                            h5    
+                                overflow hidden
+                                text-emphasis ellipsis
+                                white-space nowrap   // 超出影藏 ...
+                                font-weight 700
+                                font-size .6rem
+                                color #333 
+                                margin-block-start: 1.67em;
+                                margin-block-end: 1.67em;
+                                margin-inline-start: 0px;
+                                margin-inline-end: 0px;
+                            .cp-desc
+                                width 120%
+                                transform scale(0.8333)
+                                transform-origin 0 50%
+                                color #7f7f7f
+                                font-size .5rem
+                                line-height 1.2
+                                overflow-x hidden  
+                                margin .3rem 0 0 
+                                white-space nowrap
+                                text-overflow ellipsis
+                            .cp-price
+                                font-size .6rem
+                                color #d44d44
+                                font-weight 700
+                                white-space nowrap
+
+    .chx
+        position relative
+        box-shadow 0 5px 13px rgba(0,0,0,.1)
+        margin-bottom 6px
+        background #fff
+        .chx-head
+            display flex
+            justify-content space-between
+            align-items center
+            padding 0 .6em
+            margin-top .6rem
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee; 
+            .chx-title
+                display block
+                margin-block-start 0.83em
+                margin-block-end 0.83em
+                margin-inline-start 0px
+                margin-inline-end 0px
+        .chx-good
+            padding-bottom 0
+            padding .9rem .6rem
+            
+            .chx-ul
+                display flex
+                flex-wrap wrap
+                justify-content space-between
+                align-content center
+                .chx-content
+                    margin-right .2rem
+                    width calc(50% - .2rem)
+                    position relative
+                    flex-shrink 0
+                    .chx-msg
+                    
+                        .chx-img
+                            display block
+                            position relative
+                            padding-top 100%
+                            border-radius .2rem
+                            border 1px solid #f0f0f0
+                            img 
+                                position absolute
+                                left 0
+                                top 0
+                                width 100%
+                                height 100%
+                                border-radius .2rem
+                        .chx-text
+                            margin 0 auto
+                            padding .4rem .6rem .9rem
+                            .chx-name
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                margin: 0;
+                                font-size: .6rem;
+                                color: #333;
+                            .chx-desc
+                                width 120%
+                                transform scale(.8333)
+                                transform-origin 0 50%
+                                margin-top: .3rem;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                font-size: .5rem;
+                                line-height: 1.2;
+                                color: #7f7f7f;
+                                min-height: .6rem;
+                            .chx-price
+                                font-size .6rem
+                                color #d44d44
+                                font-weight 700
+                                white-space nowrap
+    .phone
+        margin-bottom 60px
+
+
+                                         
               

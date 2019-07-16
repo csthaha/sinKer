@@ -1,8 +1,11 @@
 export default {
-    // 产品的种类接口
-    floorsUrl : 'https://resource.smartisan.com/marketing/mobile/index_fac3d2920911d9e19ea7b4af2814ca9f.json',
+    // 热销商品接口
+    floorsUrl : 'https://www.easy-mock.com/mock/5ca457efc4e9a575b66b625c/example/goodsList',
+
+    // 其他商品
+    floorOtherUrl: 'https://www.easy-mock.com/mock/5ca457efc4e9a575b66b625c/example/sinker',
 
     //单件物品的详情接口
-    floorDetailUrl : 'https://shopapi.smartisan.com/product/skus?ids=100039740'
+    floorDetailUrl : 'https://shopapi.smartisan.com/product/skus?ids='
 }
 

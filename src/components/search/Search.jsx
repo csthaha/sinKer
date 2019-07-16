@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './Search.styl'
 class Search extends Component {
     state = {}
     render() {
         return (
-            <div style={{ marginTop: '200px', backgroundColor: 'red'}}>
-                hhh
+            <div className="s" >
+                hhhddddddd
             </div>
         )
     }
