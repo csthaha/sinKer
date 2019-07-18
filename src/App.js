@@ -54,6 +54,8 @@ function App() {
             <Route path="/" component={Home} />
           </Switch>
           {/* 使用 Switch 来选择固定的路径， 当为根路径的时候显示 index 路径下的东西 */}
+          <Redirect from="/" to="/index" />
+
         </div>
       </div>
     </Router>

@@ -30,3 +30,52 @@
         2. 安装 http-proxy-middlewear 然后新建 setupProxy.js 文件 来设置代理 然后去请求
         3. 在 webpack.config.js 中 添加
                 ``` devServer: {  host: 'localhost', port: 3000, proxy: {   '/api/': {     target: '',     changeOrigin: true   } } },``` 仍然是无法解决
+
+### Day 3: 调用easy-mock 获取数据，路由跳转传参
+- 将锤子官网里 首页的图片以及 商品的名字描述写在了easy-mock中，[热销商品](https://www.easy-mock.com/mock/5ca457efc4e9a575b66b625c/example/goodsList'), [其它](https://www.easy-mock.com/mock/5ca457efc4e9a575b66b625c/example/sinker), 查询某个物品的详情接口：https://shopapi.smartisan.com/product/skus?ids=。 获取到数据后，使用昨天的方法渲染页面，改变些样式。
+
+- 跳转传参
+        给我们需要点击跳转的元素添加一个点击事件：onClick={this.handleToGoodDetail(`${item.id}`,index)} 注意，map 渲染的列表，我们不能直接输出，会循环好多个输出。然后我们在handleToGoodDetail 方法中， 返回 `this.props.history.push({ pathname: url })`，再给我们需要的组件中设置路由 <Route path={`/:id`} component={HotGood}></Route> 注意这里的 :id 似乎是固定的参数，就是我们所 push 进去的，然后我们在需要的组件中 使用`this.props.match.params` 来接收，我们可以在 componentDidMount 里打印查看。
+        注意： 这种设计的路径 只会在我们内容的下面，我们需要给 跳转的页面设计样式：
+        ```position: fixed; top: 0 left: 0 right: 0 bottom: 0 background-color: #212121 z-index: 100``` 如此就可以啦
+
+- 切个人页面
+        切图仔并不是很快乐
+
+### Day 4: 使用 better-scroll 中的坑
+> 首先说下为什么要使用 better-scroll 插件吧，其实为了提高用户的体验高是一方面，还有一方面就是，react，这个项目 跳转到商品详情页 ```<Route path={`${match.url}/:id`} component={HotGood}></Route>``` 注意，react 都是单页面的，所以这里就会在home页面，而我们想要显示good页面，就得从样式下手了。
+
+- 将商品页面层级设高：```.hotGood 
+                                position: fixed
+                                top: 0
+                                left: 0
+                                right: 0
+                                bottom: 0
+                                background-color: #fff
+                                z-index: 100
+                                width 100%
+                                height 100% ```
+- 获取当前页面的路径： 可以在生命周期 ```componentDidMount(){ console.log(this.props.match) }```中查看。
+
+- 完成了 商品详情页面的设计。这里 遇到了better-scroll 的坑：
+        就是滚动不了：原因可能如下：
+        1. 我们需要滚动的页面的 层级关系
+                意思就是 <Scroll> </Scroll> 中只能包含一个总的 div，有多个的话可能失效
+        2. scroll 需要设置相关的 样式，即我们封装 scroll 时，需要设置scroll样式
+        3. 需要滚动内容的高度，得大于所设置得高度
+                我们在封装 scroll 时，可以 console.log(this.scroll) 打印： heightScroll >  wrapperHeight
+        4. 滚动得内容需要添加样式。
+        详细描述请参考大佬博客，[better-scroll失效原因](https://blog.csdn.net/qiqi_77_/article/details/79361413)
+
+### Day 5: 版本，型号功能得选择，点击弹出，再次点击隐藏
+- 设置蒙层
+        在我们需要设置蒙层得同级，添加一个div 将他的样式设为：
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 98;
+        这里得样式，根据自身情况定义。
+- 利用 this.state.show ? style={{ display:'none'}} : '' 来控制 页面得显示与隐藏

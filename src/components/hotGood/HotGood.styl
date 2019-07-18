@@ -1,0 +1,247 @@
+.hotGood
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #fff
+    z-index: 100
+    width 100%
+    height 100%
+    .hotGood-head
+        height 50px
+        display flex
+        background #1d1d1d
+        width 100%
+        align-items center
+        .back
+            color #fff
+            margin-left 10px
+            list-style-type none
+            
+        .hotGood-name
+            color #ffffff
+            font-size 18px      
+            text-align center
+            position absolute
+            top 0
+            left 60px
+            right 60px      
+            // overflow hidden
+            text-overflow ellipsis
+            white-space nowrap
+    .head-tab
+        position fixed
+        left 0
+        right 0
+        // padding .45rem .3rem 
+        background #f2f2f2
+        box-shadow 0 5px 13px rgba(0,0,0,.12)
+        .tab-list
+            display flex
+            list-style none
+            text-align center
+            height 30px
+            align-items center
+            margin 10px
+            border-radius 5px
+            border 1px solid #bfbfbf
+            .tab
+                flex 1
+                border-right 1px solid #bfbfbf
+            &:active
+                background-color #fff
+                color #ffffff
+    .good-scroll
+        height 70% 
+        width 100%
+        .good-container
+            position relative
+            box-shadow 0 5px 13px rgba(0,0,0,.1)
+            margin-bottom 6px
+            background #fff
+            width 100%
+            height 80vw
+            display flex
+            overflow-x auto
+            // overflow-y hidden
+            box-shadow 0 5px 13px rgba(0,0,0,.1)
+            .good-slide
+                width 100%
+                height 100%
+                border 1px solid #f1f1f1
+                img 
+                    margin 0 auto
+                    height 100%
+        .good-msg
+            position relative
+            box-shadow 0 5px 13px rgba(0,0,0,.1)
+            margin-bottom 6px
+            background #fff
+            .msg-title
+                padding 0 .6rem
+                height 40px
+                line-height 40px       
+                font-weight 700
+                color #666666
+                white-space nowrap
+                // overflow hidden
+                text-emphasis ellipsis
+                border-bottom 1px solid #bfbfbf
+            .msg-content
+                padding .8rem .9rem
+                border-bottom 1px solid #bfbfbf
+                .msg-name
+                    color #333333
+                    margin-bottom .4rem
+                    font-size 16px 
+                    font-weight bold
+                .msg-desc
+                    color #7f7f7f
+                    font-size 13px    
+                    line-height 1.5
+                    // overflow hidden
+                .msg-price
+                    margin-right .2rem
+                    font-weight 700     
+                    color #d44d44
+                    font-size 15px
+                    display flex
+                    white-space nowrap
+                    .price-new
+                        margin-right 1.2rem
+                    .price-old
+                        color #7f7f7f
+                        font-size 12px   
+                        line-height 1.5
+                        text-decoration line-through
+            .msg-foot
+                padding .8rem .9rem 1.0rem
+                .foot-title
+                    font-size 13px        
+                    line-height 1.2
+                    padding 0 0 .95rem
+                    color #999999
+                    display block
+                    .foot-content
+                        margin-bottom 0.95rem
+        .good-type
+            padding .8rem 1.5rem .6rem .8rem
+            position relative
+            box-shadow 0 5px 13px rgba(0,0,0,.1)
+            margin-bottom 6px
+            background #fff
+            .type-choose
+                font-size 13px       
+                line-height 1.2
+                padding 0 0 .3rem
+                color #999999
+                .type-color
+                    line-height 1.8
+                    color #333333
+        .good-detail
+            padding .8rem 1.5rem .6rem .8rem
+            position relative
+            box-shadow 0 5px 13px rgba(0,0,0,.1)
+            margin-bottom 6px
+            background #fff
+            .detail-title
+                padding 0 0.6rem
+                margin-bottom 0.4rem
+            img 
+                width 100%
+                border-bottom 1px solid #f2f2f2
+        .tec-param
+            position relative
+            box-shadow 0 5px 13px rgba(0,0,0,.1)
+            margin-bottom 6px
+            background #fff
+            .tec-name
+                padding 0 0.6rem
+                margin-bottom 0.4rem
+                height 40px
+                line-height 40px
+                font-weight 700
+                color #666
+                white-space nowrap
+                overflow hidden
+                text-overflow ellipsis
+                border-bottom 1px solid #fafafa
+            .tec-param-main
+                padding 1rem 1rem 2rem 
+                .list-type
+                    display flex
+                    justify-content space-between
+                    padding .9rem 1rem 
+                    overflow hidden
+                    background #fafafa
+                    margin-bottom 10px
+                    font-size 13px
+                    .type-name
+                        color #333
+                        font-weight 700
+                    .type-param
+                        color #7f7f7f
+        .explain
+            position relative
+            box-shadow 0 5px 13px rgba(0,0,0,.1)
+            margin-bottom 6px
+            background #fff
+            .explain-title
+                padding 0 0.6rem
+                margin-bottom 0.4rem
+                height 40px
+                line-height 40px
+                font-weight 700
+                color #666
+                white-space nowrap
+                overflow hidden
+                text-overflow ellipsis
+                border-bottom 1px solid #fafafa
+            .why
+                margin-bottom .3rem
+                padding-left .5rem
+                font-size 10px
+                color #666
+
+    .good-footer
+        position fixed
+        bottom 0
+        left 0
+        right 0
+        display flex
+        align-items center
+        justify-content space-between
+        background #ffffff
+        height 2.75rem
+        padding 0 .4%
+        z-index 202
+        box-shadow 0 -11px 27px rgba(0,0,0,.08)
+        .cart-entry
+            flex-shrink 0
+            flex-basis 2.5rem
+            img 
+                width 100%
+                height 100%
+        .add
+            height 30px
+            width 150px
+            line-height 30px
+            text-align center
+            background-image linear-gradient(#fff,#fcfcfc)
+            color #8c8c8c
+            border 1px solid #f2f2f2
+            border-radius 10px
+        .buy
+            height 30px
+            width 150px
+            line-height 30px
+            text-align center
+            color #ffffff
+            background linear-gradient(#6e98f4,#4b77ee)
+            margin-right 10px
+            border-radius 8px
+
+            
+
+                    

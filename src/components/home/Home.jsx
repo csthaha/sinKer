@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom'
 
 
+
 import * as api from '../../api/api'
 import { get } from '../../api/axios'
 import Search from '../search/Search'
@@ -14,6 +15,7 @@ import '../../base.styl'
 import './Home.styl'
 
 
+
 class User extends Component {
     state = {
         goodsList: [],
@@ -24,9 +26,10 @@ class User extends Component {
     }
     renderGoods() {
         const { goodsList = [] } = this.state
+        const { match } = this.props;
         return goodsList.map((item, index) => {
             return (
-                <div className="good" key={index} onClick={this.handleToGoodDetail(`${item.id}`,index)}>
+                <div className="good" key={index} onClick={this.handleToGoodDetail(`${match.url}/${item.id}`, index)}>
                     <div className="good-msg">
                         <div className="img-good">
                             <img src={item.imgUrl} alt="" />
@@ -43,7 +46,7 @@ class User extends Component {
         })
     }
     handleToGoodDetail(url) {
-       
+        console.log(url)
         return () => {
             this.props.history.push({
                 pathname: url
@@ -52,9 +55,10 @@ class User extends Component {
     }
     renderCp() {
         const { cpList = [] } = this.state
+        const { match } = this.props;
         return cpList.map((item, index) => {
             return (
-                <div className="cp-content" key={index}>
+                <div className="cp-content" key={index} onClick={this.handleToGoodDetail(`${match.url}/${item.id}`, index)} >
                     <div className="cp-msg">
                         <div className="cp-img">
                             <img src={item.imgUrl} alt="" />
@@ -70,10 +74,11 @@ class User extends Component {
         })
     }
     renderChx() {
-        const { chxList = [] } = this.state
+        const { chxList = [] } = this.state;
+        const { match } = this.props;
         return chxList.map((item, index) => {
             return (
-                <div className="chx-content" key={index}>
+                <div className="chx-content" key={index} onClick={this.handleToGoodDetail(`${match.url}/${item.id}`, index)} >
                     <div className="chx-msg">
                         <div className="chx-img">
                             <img src={item.imgUrl} alt="" />
@@ -90,9 +95,10 @@ class User extends Component {
     }
     renderGfpj() {
         const { gfpjList = [] } = this.state
+        const { match } = this.props;
         return gfpjList.map((item, index) => {
             return (
-                <div className="chx-content" key={index}>
+                <div className="chx-content" key={index} onClick={this.handleToGoodDetail(`${match.url}/${item.id}`, index)}>
                     <div className="chx-msg">
                         <div className="chx-img">
                             <img src={item.imgUrl} alt="" />
@@ -109,9 +115,10 @@ class User extends Component {
     }
     renderPhone() {
         const { phoneList = [] } = this.state
+        const { match } = this.props;
         return phoneList.map((item, index) => {
             return (
-                <div className="chx-content" key={index}>
+                <div className="chx-content" key={index} onClick={this.handleToGoodDetail(`${match.url}/${item.id}`, index)}>
                     <div className="chx-msg">
                         <div className="chx-img">
                             <img src={item.imgUrl} alt="" />
@@ -127,7 +134,8 @@ class User extends Component {
         })
     }
     render() {
-        const { goodsList, cpList, chxList, gfpjList, phoneList  } = this.state
+        
+        const { match } = this.props
         return (
 
             <div>
@@ -136,100 +144,103 @@ class User extends Component {
                     <div className="head">
                         <div className="menu"></div>
                         <div className="logo"></div>
-                        <Link className="search" to={{ pathname: '/index/search' }}></Link>
+                        <Link className="search" to={{ pathname: '/search' }}></Link>
                     </div>
                     {/* swiper 轮播图 */}
-                    <div className="swiper-container" style={{ marginTop: '50px' }}>
-                        <div className="swiper-wrapper">
-                            <div className="swiper-slide" >
-                                <div className="img">
-                                    <img src="https://resource.smartisan.com/resource/h/h51008420.png" alt="" />
-                                </div>
-                            </div>
-                            <div className="swiper-slide">
+
+                        <div className="swiper-container" style={{ marginTop: '50px' }}>
+                            <div className="swiper-wrapper">
                                 <div className="swiper-slide" >
                                     <div className="img">
-                                        <img src="https://resource.smartisan.com/resource/fda5c3e61a71c0f883bbd6c76516cd85.png" alt="" />
+                                        <img src="https://resource.smartisan.com/resource/h/h51008420.png" alt="" />
+                                    </div>
+                                </div>
+                                <div className="swiper-slide">
+                                    <div className="swiper-slide" >
+                                        <div className="img">
+                                            <img src="https://resource.smartisan.com/resource/fda5c3e61a71c0f883bbd6c76516cd85.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="swiper-slide">
+                                    <div className="swiper-slide" >
+                                        <div className="img">
+                                            <img src="https://resource.smartisan.com/resource/a/app1008420.png" alt="" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="swiper-slide">
-                                <div className="swiper-slide" >
-                                    <div className="img">
-                                        <img src="https://resource.smartisan.com/resource/a/app1008420.png" alt="" />
-                                    </div>
+                            <div className='swiper-pagination'></div>
+                        </div>
+                        {/* 热销商品 */}
+                        <div className="hotGoods">
+                            <div className="hotGoods-head">
+                                <div className="head-title"> 热销商品</div>
+                                <div className="head-arrow"> > </div>
+                            </div>
+                            <div className="hotGoods-good">
+                                <div className="ul">
+                                    {this.renderGoods()}
                                 </div>
                             </div>
                         </div>
-                        <div className='swiper-pagination'></div>
-                    </div>
-                    {/* 热销商品 */}
-                    <div className="hotGoods">
-                        <div className="hotGoods-head">
-                            <div className="head-title"> 热销商品</div>
-                            <div className="head-arrow"> > </div>
-                        </div>
-                        <div className="hotGoods-good">
-                            <div className="ul">
-                                {this.renderGoods()}
+                        {/* 服装包厢 */}
+                        <div className="clothes-package">
+                            <div className="cp-head">
+                                <div className="cp-title"> 服装包箱</div>
+                                <div className="cp-arrow"> > </div>
+                            </div>
+                            <div className="cp-good">
+                                <div className="cp-ul">
+                                    {this.renderCp()}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {/* 服装包厢 */}
-                    <div className="clothes-package">
-                        <div className="cp-head">
-                            <div className="cp-title"> 服装包箱</div>
-                            <div className="cp-arrow"> > </div>
-                        </div>
-                        <div className="cp-good">
-                            <div className="cp-ul">
-                                {this.renderCp()}
+                        {/* 畅呼吸 */}
+                        <div className="chx">
+                            <div className="chx-head">
+                                <div className="chx-title"> 畅呼吸 </div>
+                                <div className="chx-arrow"> > </div>
+                            </div>
+                            <div className="chx-good">
+                                <div className="chx-ul">
+                                    {this.renderChx()}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {/* 畅呼吸 */}
-                    <div className="chx">
-                        <div className="chx-head">
-                            <div className="chx-title"> 畅呼吸 </div>
-                            <div className="chx-arrow"> > </div>
-                        </div>
-                        <div className="chx-good">
-                            <div className="chx-ul">
-                                {this.renderChx()}
+                        {/* 官方配件 */}
+                        <div className="chx">
+                            <div className="chx-head">
+                                <div className="chx-title"> 官方配件 </div>
+                                <div className="chx-arrow"> > </div>
+                            </div>
+                            <div className="chx-good">
+                                <div className="chx-ul">
+                                    {this.renderGfpj()}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {/* 官方配件 */}
-                    <div className="chx">
-                        <div className="chx-head">
-                            <div className="chx-title"> 官方配件 </div>
-                            <div className="chx-arrow"> > </div>
-                        </div>
-                        <div className="chx-good">
-                            <div className="chx-ul">
-                                {this.renderGfpj()}
+                        {/* 坚果系列及其配件 */}
+                        <div className="chx phone">
+                            <div className="chx-head">
+                                <div className="chx-title"> 坚果系列及其配件 </div>
+                                <div className="chx-arrow"> > </div>
+                            </div>
+                            <div className="chx-good">
+                                <div className="chx-ul">
+                                    {this.renderPhone()}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    {/* 坚果系列及其配件 */}
-                    <div className="chx phone">
-                        <div className="chx-head">
-                            <div className="chx-title"> 坚果系列及其配件 </div>
-                            <div className="chx-arrow"> > </div>
-                        </div>
-                        <div className="chx-good">
-                            <div className="chx-ul">
-                                {this.renderPhone()}
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <Route path={`/:id`} component={HotGood}></Route>
-                <Route path="/index/search" component={Search}></Route>
+                <Route path={`${match.url}/:id`} component={HotGood}></Route>
+                <Route path="/search" component={Search}></Route>
             </div>
         )
     }
     componentDidMount() {
+        console.log('路径:',this.props.match)
+
         const self = this
         var mySwiper = new Swiper('.swiper-container', {
             autoplay: true,
