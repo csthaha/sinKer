@@ -11,8 +11,22 @@ import Scroll from '../../common/scroll/scroll'
 import Cart from '../cart/Cart'
 import * as icon from '../../images/img'
 import './HotGood.styl'
+
+import store from '../../store/store'
+
 class HotGood extends Component {
+    constructor(props) {
+        super(props)
+        console.log('----',store.getState())
+        this.showChoose = this.showChoose.bind(this)
+        this.storeChange = this.storeChange.bind(this)
+        store.subscribe(this.storeChange)
+    }
+    storeChange() {
+        this.setState(store.getState())
+    }
     state = {
+       
         name: '',
         desc: '',
         swiperImg: [],
@@ -27,7 +41,8 @@ class HotGood extends Component {
         chooseColor: '',
         chooseSize: '',
         chooseSizeValue: '',
-        chooseNum: ''
+        chooseNum: '',
+        // show: true
 
     }
     render() {
@@ -80,13 +95,13 @@ class HotGood extends Component {
                             </div>
                             {/* 版本 */}
 
-                            <div className="good-type">
+                            <div className="good-type"  onClick = { this.showChoose }>
                                 <div className="type-choose">已选版本</div>
                                 
                                     <div style={{ display: 'flex', position: 'realtive' }} >
                                         <div className="type-color">
                                             <div className="color">{this.state.chooseColor.spec_name}：{this.state.chooseColor.value}</div>
-                                            <div className="color-size">{this.state.chooseSize}: {this.state.chooseSizeValue}</div>
+                                            <div className="color-size">{this.state.chooseSize}  {this.state.chooseSizeValue}</div>
                                             <div className="num">数量：{this.state.chooseNum}</div>
                                         </div>
                                         <div className="arrow" style={{ position: 'absolute', right: '20px' }}>></div>
@@ -128,8 +143,8 @@ class HotGood extends Component {
                         <span>现在购买</span>
                     </div>
                 </div>
-                <div className="showChoose" style={{display:'none'}}>
-                    <Choose />
+                <div className="showChoose" style= {{ display: store.getState().show ? 'none' : ''}}>
+                    <Choose url = {this.props.match.params.id}/>
                 </div>
                 
                 <Route path="/cart" component={Cart}></Route>
@@ -187,10 +202,19 @@ class HotGood extends Component {
             })
         )
     }
+    选择版本
+    showChoose() {
+        console.log('111')
+        const action = {
+            type: 'CHANGE_CHOOSE_SHOW'
+        }
+        store.dispatch(action)
+    }
     componentDidMount() {
         // console.log('---', this.props.match.params.id)   
         const self = this
-
+        
+        
         get(api.default.floorDetailUrl + this.props.match.params.id)
             .then(res => {
                 console.log('详细信息：', res.data.list[0])

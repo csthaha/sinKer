@@ -78,4 +78,5 @@
         left: 0;
         z-index: 98;
         这里得样式，根据自身情况定义。
-- 利用 this.state.show ? style={{ display:'none'}} : '' 来控制 页面得显示与隐藏
+- 利用 style= {{ display: this.state.show ? 'none' : ''}}来控制 页面得显示与隐藏。我们知道，这里是通过 改变 show 得值 为true or false 来控制 是否显示。但是 react 要注意得一点就是 不能直接修改 state 中得数据。
+```直接修改state，react 不会重新render，还有一点就是，setState得更新是异步 得，而且，react会将要修改得状态放到一个更新得队列，并考虑到render次数，会 将多个值改变并且一次render```
