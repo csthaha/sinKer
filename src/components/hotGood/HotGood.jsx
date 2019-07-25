@@ -17,7 +17,7 @@ import store from '../../store/store'
 class HotGood extends Component {
     constructor(props) {
         super(props)
-        console.log('----',store.getState())
+        console.log('----', store.getState())
         this.showChoose = this.showChoose.bind(this)
         this.storeChange = this.storeChange.bind(this)
         store.subscribe(this.storeChange)
@@ -26,7 +26,8 @@ class HotGood extends Component {
         this.setState(store.getState())
     }
     state = {
-       
+        headerList: ['商品', '详情', '参数', '推荐'],
+        headerIndex: 0,
         name: '',
         desc: '',
         swiperImg: [],
@@ -49,21 +50,22 @@ class HotGood extends Component {
         const { refreshScroll } = this.state
         return (
             <div className="hotGood" style={{ width: '100%', height: '100%' }}>
-                
+
                 <div className="hotGood-head">
                     <Link className="back" to="/index">返回</Link>
                     <h1 className="hotGood-name">{this.state.name}</h1>
                 </div>
                 <div className="head-tab">
                     <div className="tab-list">
-                        <div className="tab">商品</div>
-                        <div className="tab">详情</div>
-                        <div className="tab">参数</div>
-                        <div className="tab">推荐</div>
+                        {/* <div className="tab" onClick={this.scrollTo.bind(this)}>商品</div>
+                        <div className="tab" onClick={this.scrollTo.bind(this)}>详情</div>
+                        <div className="tab" onClick={this.scrollTo.bind(this)}>参数</div>
+                        <div className="tab" onClick={this.scrollTo.bind(this)}>推荐</div> */}
+                        {this.renderHeaderList()}
                     </div>
                 </div>
                 <div className="good-scroll" style={{ marginTop: '65px' }}>
-                    <Scroll onScroll={() => { }} >
+                    <Scroll onScroll={this.scroll} >
                         {/* 图片 */}
                         <div style={{ width: "100%" }}>
                             <Scroll onScroll={() => { }}>
@@ -80,7 +82,7 @@ class HotGood extends Component {
                                     <div className="msg-name">{this.state.name}</div>
                                     <div className="msg-desc">{this.state.desc}</div>
                                     <div className="msg-price">
-                                        <div className="price-new">￥{this.state.priceNew - 1}.00</div>
+                                        <div className="price-new">￥{this.state.priceNew - Math.floor(Math.random() * 10)}.00</div>
                                         <div className="price-old">￥{this.state.priceNew}.00</div>
                                     </div>
                                 </div>
@@ -95,18 +97,18 @@ class HotGood extends Component {
                             </div>
                             {/* 版本 */}
 
-                            <div className="good-type"  onClick = { this.showChoose }>
+                            <div className="good-type" onClick={this.showChoose}>
                                 <div className="type-choose">已选版本</div>
-                                
-                                    <div style={{ display: 'flex', position: 'realtive' }} >
-                                        <div className="type-color">
-                                            <div className="color">{this.state.chooseColor.spec_name}：{this.state.chooseColor.value}</div>
-                                            <div className="color-size">{this.state.chooseSize}  {this.state.chooseSizeValue}</div>
-                                            <div className="num">数量：{this.state.chooseNum}</div>
-                                        </div>
-                                        <div className="arrow" style={{ position: 'absolute', right: '20px' }}>></div>
+
+                                <div style={{ display: 'flex', position: 'realtive' }} >
+                                    <div className="type-color">
+                                        <div className="color">{this.state.chooseColor.spec_name}：{this.state.chooseColor.value}</div>
+                                        <div className="color-size">{this.state.chooseSize}  {this.state.chooseSizeValue}</div>
+                                        <div className="num">数量：{this.state.chooseNum}</div>
                                     </div>
-                                
+                                    <div className="arrow" style={{ position: 'absolute', right: '20px' }}>></div>
+                                </div>
+
                             </div>
                             {/* 商品详情 */}
                             <div className="good-detail">
@@ -136,23 +138,46 @@ class HotGood extends Component {
                             <img src={icon.gouWuChe} alt="" />
                         </Link>
                     </div>
-                    <div className="add">
+                    <div className="add" >
                         <span>加入购物车</span>
                     </div>
                     <div className="buy">
                         <span>现在购买</span>
                     </div>
                 </div>
-                <div className="showChoose" style= {{ display: store.getState().show ? 'none' : ''}}>
-                    <Choose url = {this.props.match.params.id}/>
+                <div className="showChoose" style={{ display: store.getState().show ? 'none' : '' }}>
+                    <Choose url={this.props.match.params.id} parentNum={this.getNum.bind(this)}/>
                 </div>
-                
+
                 <Route path="/cart" component={Cart}></Route>
             </div>
         )
     }
+    getNum(num) {
+        console.log(num)
+    }
+    // 渲染头部
+    renderHeaderList() {
+        const { headerList } = this.state
+        return (
+            headerList.map((item, index) => {
+                return (
+                    <div className="tab" key = {index} style={{backgroundColor: (index === this.state.headerIndex ) ? '#DCDCDC' : ''}} onClick={this.scrollTo.bind(this,index)}>{item}</div>
+                )
+            })
+        )
+    }
+    scroll(e) {
+        console.log(e.y)
+    }
+    scrollTo(index) {
+        console.log(index)
+        this.setState({
+            headerIndex: index
+        })
+    }
     //选择 
-    
+
     renderSwiper() {
         const { swiperImg = [] } = this.state
         return (
@@ -213,8 +238,8 @@ class HotGood extends Component {
     componentDidMount() {
         // console.log('---', this.props.match.params.id)   
         const self = this
-        
-        
+
+
         get(api.default.floorDetailUrl + this.props.match.params.id)
             .then(res => {
                 console.log('详细信息：', res.data.list[0])
@@ -231,16 +256,34 @@ class HotGood extends Component {
                         chooseSizeValue: good.attr_info[8].value
                     })
                 }
+                if (!(good.shop_info.tpl_content.base.images.ali.url instanceof Array)) {
+                    let img = good.shop_info.tpl_content.base.images.ali.url.split(' ');
+                    self.setState({
+                        detailImg: img
+                    })
+                } else {
+                    self.setState({
+                        detailImg: good.shop_info.tpl_content.base.images.ali.url
+                    })
+                }
+                if (!good.attr_info[1]) {
+                    self.setState({
+                        chooseColor: good.attr_info[9],
+                    })
+                } else {
+                    self.setState({
+                        chooseColor: good.attr_info[1]
+                    })
+                }
                 self.setState({
                     name: good.shop_info.title,
                     swiperImg: good.shop_info.ali_images,
-                    detailImg: good.shop_info.tpl_content.base.images.ali.url,
+
                     desc: good.shop_info.sub_title,
                     priceNew: good.price,
                     tecName: good.shop_info.tpl_content.base.attributes[0].title,
                     tecParameters: good.shop_info.tpl_content.base.attributes[0].list,
                     explain: good.shop_info.buy_notes,
-                    chooseColor: good.attr_info[1],
                     chooseNum: 1
                 })
             })

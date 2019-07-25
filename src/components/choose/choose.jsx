@@ -8,6 +8,7 @@ import * as api from '../../api/api'
 import './choose.styl'
 class Choose extends Component {
     state = {
+        num: 1,
         currentIndex: '',
         currentIndex1: '',
         color: [],
@@ -64,9 +65,9 @@ class Choose extends Component {
                         <div className="cd">
                             <div className="cdd">数量选择</div>
                             <div className="cde">
-                                <div className="cdec reduce">-</div>
-                                <div className="cdec num">1</div>
-                                <div className="cdec add">+</div>
+                                <div className="cdec reduce" style={{ backgroundColor: (1 === this.state.num) ? 'gray' : '' }} onClick={this.reduce.bind(this)}>-</div>
+                                <div className="cdec num">{ this.state.num }</div>
+                                <div className="cdec add" onClick={this.add.bind(this)}>+</div>
                             </div>
                         </div>
                     </div>
@@ -118,6 +119,22 @@ class Choose extends Component {
             currentIndex1: index
         })
     }
+    add() {
+        let { num } = this.state
+        num++
+        this.setState({
+            num
+        })
+        this.props.parentNum(num)
+    }
+    reduce() {
+        let {num} = this.state
+        num--
+        if(num < 1) return
+        this.setState({
+            num
+        })
+    }
     hiddenChoose() {
         console.log('---')
         // console.log('++++', this.props.match)   
@@ -145,12 +162,21 @@ class Choose extends Component {
                         name2: good[1].spec_name
                     })
                 }
+                if (!res.data.list[0].attr_info[1]) {
+                    self.setState({
+                        defaultColor:  res.data.list[0].attr_info[9].value,
+                    })
+                } else {
+                    self.setState({
+                        defaultColor:  res.data.list[0].attr_info[1].value
+                    })
+                }
                 self.setState({
                     color: good[0].spec_values,
                     name1: good[0].spec_name,
                     defaultImg: res.data.list[0].shop_info.ali_image,
                     defaultName: res.data.list[0].shop_info.title,
-                    defaultColor: res.data.list[0].attr_info[1].value,
+                    // defaultColor: res.data.list[0].attr_info[1].value,
                     defaultPrice: res.data.list[0].price
                 })
             })

@@ -1,5 +1,23 @@
 const defaultState = {
-    show: true
+    show: true,
+    itemList: [
+        {
+            imgUrl:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1816948731,4203604980&fm=26&gp=0.jpg',
+            name: '帆布鞋',
+            color: '白色',
+            newPrice: '145.00',
+            num: '1',
+            oldPrice: '199.00'
+        },
+        {
+            imgUrl:'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1816948731,4203604980&fm=26&gp=0.jpg',
+            name: '帆布鞋',
+            color: '白色',
+            newPrice: '145.00',
+            num: '1',
+            oldPrice: '199.00'
+        }
+    ]
 }
 
 const reducer = (state = defaultState, action) => {
