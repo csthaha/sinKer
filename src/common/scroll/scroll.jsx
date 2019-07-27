@@ -20,7 +20,7 @@ class Scroll extends Component {
             this.bscroll.on('scroll', (e) => {
                 this.props.onScroll(e)
                 // 实例通过滚动方法监听到父级
-            })
+            })   
             console.log(this.bscroll)
         }
     }

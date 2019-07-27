@@ -80,3 +80,69 @@
         这里得样式，根据自身情况定义。
 - 利用 style= {{ display: this.state.show ? 'none' : ''}}来控制 页面得显示与隐藏。我们知道，这里是通过 改变 show 得值 为true or false 来控制 是否显示。但是 react 要注意得一点就是 不能直接修改 state 中得数据。
 ```直接修改state，react 不会重新render，还有一点就是，setState得更新是异步 得，而且，react会将要修改得状态放到一个更新得队列，并考虑到render次数，会 将多个值改变并且一次render```
+
+### All : 购物车功能的实现
+> 由于中间隔了一段事件没有写，最近花了一两天的事件完成了这个功能，索性这次就全部总结完吧。
+- 子组件向父组件传值
+   项目中，我是从 子组件choose 组件中向 父组件HotGood 组件传值 
+       我这里传的是 num 和 color：
+       子：  <div className="cdec add" onClick={this.add.bind(this)}>+</div>
+                add事件： add() { this.props.parentNum(所传的值) }
+       父：  将 parentNum 作为 父组件元素的 属性:
+                parentNum={this.getNum.bind(this)}
+                获取值： getNum(值) { console.log(值) }
+- 使用 redux 来实现购物车:
+    1. 创建 store.js 文件，用来存储我们的 state
+    2. 创建 reducer.js 文件，用来修改 state，注意state是不能直接修改的。
+    3. store.js:
+        ```import { createStore } from 'redux'
+           import reducer from './reducer.js'
+           const store = createStore(reducer) 
+           export default store
+        ```
+    4. reducer.js:
+        ```const default = { // 创建默认数据
+                itemList: [
+                        {
+                                num: 0, ...
+                        }
+                ]
+        }
+        const reducer = (state = default, action) {
+                // 接收两个参数 state action
+                if(action.type === '  ') {
+                        let newState = Json.Parse(Json.stringify(state))  // 将 state 拷贝
+                        //再做 newstate 的修改
+                        //最后返回 newstate
+                }
+                return state
+        }
+    5. .jsx 文件中：
+        引入store： import store from '../store/store.js
+        constructor(props) {
+                super(props)
+                //通过 getState() 获取到 store 中的值
+                console.log(store.getState())
+        }
+        进行state 的修改
+        onClick={this.add} 需要在 constructot 中 绑定this 指向 state： this.add = this.add.bind(this)
+        然后add事件：
+                add() {
+                        const action = {
+                                //action 是一个对象，type 是必须的
+                                type: 'ADD',
+                                num: 5
+                        }
+                }
+                然后在rducer 中修改
+        通过 subscribe 获取到修改的state
+        this.storeChange = this.storeChange.bind(this)
+        store.subscribe(this.storeChange)
+        storeChange() {
+        this.setState(store.getState())}
+
+练习react 的简单模仿算是完成了，也快要结束了，现在开始就好好准备面试吧！
+
+> 革命尚未完成，同志仍需努力，不管是哪方面
+> react, vue, node, 算法, css3 动画等，你都还差的远
+> 继续加油吧!!!

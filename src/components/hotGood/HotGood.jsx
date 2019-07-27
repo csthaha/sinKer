@@ -14,11 +14,15 @@ import './HotGood.styl'
 
 import store from '../../store/store'
 
+
+
+
 class HotGood extends Component {
     constructor(props) {
         super(props)
         console.log('----', store.getState())
         this.showChoose = this.showChoose.bind(this)
+        this.addToCart = this.addToCart.bind(this)
         this.storeChange = this.storeChange.bind(this)
         store.subscribe(this.storeChange)
     }
@@ -44,7 +48,10 @@ class HotGood extends Component {
         chooseSizeValue: '',
         chooseNum: '',
         // show: true
-
+        //cart
+        cartImg: '',
+        cartColor: '',
+        cartNum: 1,
     }
     render() {
         const { refreshScroll } = this.state
@@ -64,10 +71,10 @@ class HotGood extends Component {
                         {this.renderHeaderList()}
                     </div>
                 </div>
-                <div className="good-scroll" style={{ marginTop: '65px' }}>
-                    <Scroll onScroll={this.scroll} >
+                <div className="good-scroll" style={{ marginTop: '65px' }} >
+                    <Scroll onScroll={this.scroll.bind(this)} >
                         {/* 图片 */}
-                        <div style={{ width: "100%" }}>
+                        <div style={{ width: "100%" }} ref="headList">
                             <Scroll onScroll={() => { }}>
 
                                 <div className="good-container" >
@@ -137,16 +144,17 @@ class HotGood extends Component {
                         <Link to="/cart">
                             <img src={icon.gouWuChe} alt="" />
                         </Link>
+                        <div className="icon-num" style={{ display: store.getState().itemList.length === 0 ? 'none' : '' }}>{store.getState().itemList.length}</div>
                     </div>
-                    <div className="add" >
+                    <div className="add" onClick={this.addToCart}>
                         <span>加入购物车</span>
                     </div>
-                    <div className="buy">
+                    <div className="buy" >
                         <span>现在购买</span>
                     </div>
                 </div>
                 <div className="showChoose" style={{ display: store.getState().show ? 'none' : '' }}>
-                    <Choose url={this.props.match.params.id} parentNum={this.getNum.bind(this)}/>
+                    <Choose url={this.props.match.params.id} parentNum={this.getNum.bind(this)} parentNum1={this.getNum1.bind(this)} parentColor={this.getColor.bind(this)} />
                 </div>
 
                 <Route path="/cart" component={Cart}></Route>
@@ -155,6 +163,39 @@ class HotGood extends Component {
     }
     getNum(num) {
         console.log(num)
+        this.setState({
+            cartNum: num
+        })
+    }
+    getNum1(num) {
+        console.log(num)
+        this.setState({
+            cartNum: num
+        })
+    }
+    getColor(color) {
+        console.log(color)
+        this.setState({
+            cartColor: color.item_value,
+            cartImg: color.image
+        })
+    }
+    // 添加到购物车
+    addToCart() {
+        console.log('添加？')
+        const action = {
+            type: 'ADD',
+            imgUrl: this.state.swiperImg[0],
+            // imgUrl: this.state.cartImg,
+            name: this.state.name,
+            color: this.state.cartColor,
+            newPrice: `${this.state.priceNew - Math.floor(Math.random() * 10)}.00`,
+            num: this.state.cartNum,
+            oldPrice: `${this.state.priceNew}.00`,
+            select: false
+        }
+        store.dispatch(action)
+
     }
     // 渲染头部
     renderHeaderList() {
@@ -162,19 +203,36 @@ class HotGood extends Component {
         return (
             headerList.map((item, index) => {
                 return (
-                    <div className="tab" key = {index} style={{backgroundColor: (index === this.state.headerIndex ) ? '#DCDCDC' : ''}} onClick={this.scrollTo.bind(this,index)}>{item}</div>
+                    <div className="tab" key={index} style={{ backgroundColor: (index === this.state.headerIndex) ? '#DCDCDC' : '' }} onClick={this.scrollTo.bind(this, index)}>{item}</div>
                 )
             })
         )
     }
     scroll(e) {
         console.log(e.y)
+        if (e.y > -492) {
+            this.setState({
+                headerIndex: 0
+            })
+        }
+        if (-492 > e.y > -2607) {
+            this.setState({
+                headerIndex: 1
+            })
+        }
+        if (-2607 > e.y) {
+            this.setState({
+                headerIndex: 2
+            })
+        }
     }
+    //点击联动
     scrollTo(index) {
         console.log(index)
         this.setState({
             headerIndex: index
         })
+        console.log(this.bscroll)
     }
     //选择 
 
@@ -240,6 +298,7 @@ class HotGood extends Component {
         const self = this
 
 
+
         get(api.default.floorDetailUrl + this.props.match.params.id)
             .then(res => {
                 console.log('详细信息：', res.data.list[0])
@@ -257,11 +316,18 @@ class HotGood extends Component {
                     })
                 }
                 if (!(good.shop_info.tpl_content.base.images.ali.url instanceof Array)) {
-                    let img = good.shop_info.tpl_content.base.images.ali.url.split(' ');
-                    self.setState({
-                        detailImg: img
-                    })
-                } else {
+                    if (good.shop_info.tpl_content.base.images.ali_mobile.url instanceof Array) {
+                        self.setState({
+                            detailImg: good.shop_info.tpl_content.base.images.ali_mobile.url
+                        })
+                    } else {
+
+                        let img = good.shop_info.tpl_content.base.images.ali.url.split(' ');
+                        self.setState({
+                            detailImg: img
+                        })
+                    }
+                } else if (good.shop_info.tpl_content.base.images.ali.url instanceof Array) {
                     self.setState({
                         detailImg: good.shop_info.tpl_content.base.images.ali.url
                     })

@@ -43,7 +43,7 @@
 .nav-link.active {
     color: black;
     background-color: #e2e2e2;
-    border-radius: 50%
+    /* border-radius: 50% */
 }
 .nav-link img{
     width: 27px;

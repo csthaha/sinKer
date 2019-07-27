@@ -90,11 +90,13 @@ class Choose extends Component {
     chooseColor(index) {
         const self = this
         // console.log(index)
+        const { color } = this.state
         this.setState({
             currentIndex: index,
             defaultImg: self.state.color[index].image,
             defaultColor: self.state.color[index].show_name
         })
+        this.props.parentColor(color[index])
     }
     
     renderSize() {
@@ -134,6 +136,7 @@ class Choose extends Component {
         this.setState({
             num
         })
+        this.props.parentNum1(num)
     }
     hiddenChoose() {
         console.log('---')
