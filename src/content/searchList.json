@@ -1,0 +1,212 @@
+{
+    "categoryName": [
+        "数据线",
+        "扫地机器人",
+        "TNT显示屏"
+    ],
+    "data": [
+        {
+            "goods": {
+                "title": "数据线",
+                "data": [
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/82aab62886740f165a3631ce6cffe895.jpg?x-oss-process=image/resize,w_342/format,webp",
+                        "name": "坚果彩虹数据线",
+                        "desc": "七彩配色随机发货，为生活增添一份小小惊喜",
+                        "price": "￥19.00",
+                        "id": "100053001"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/8e822aa7cbab24fec7eacf0bbb2f6526.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "坚果 弯头数据线（Type-C）",
+                        "desc": "“3A”大电流",
+                        "price": "￥24.92",
+                        "id": "1000609"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/834e8388b0017c457c98baa6545cdfb2.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "C-force USB-C多功能转接器",
+                        "desc": "精选配件，限时直降",
+                        "price": "￥16.00",
+                        "id": "100059101"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/45312fb748d54aa2e58a8f4d637e9e65.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "Smartisan",
+                        "desc": "即插即用，全面兼容",
+                        "price": "￥16.00",
+                        "id": "100026801"
+                    }
+                ]
+            }
+        },
+        {
+            "goods": {
+                "title": "扫地机器人",
+                "data": [
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/b1ea23314be6d08474d8d3e9c7ba6e15.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "科沃斯扫地机器人 DN55",
+                        "desc": "智能规划，扫拖一体",
+                        "price": "￥2399.00",
+                        "id": "1000645"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/df94938d10ce86465e33e8c28b5ab8d8.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "科沃斯扫地机器人 DF45",
+                        "desc": "智能规划，扫拖一体",
+                        "price": "￥1699.00",
+                        "id": "100064401"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/69376ec9945e7cafa1fa393439c8835d.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "科沃斯扫地机器人 DH45",
+                        "desc": "智能规划",
+                        "price": "￥1799.00",
+                        "id": "100064301"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/b6db8976d3fe9a04b0a58dc82099838b.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "科沃斯扫地机器人 DK35",
+                        "desc": "智能规划",
+                        "price": "￥1699.00",
+                        "id": "100064201"
+                    }
+                ]
+            }
+        },
+        {
+            "goods": {
+                "title": "TNT显示屏",
+                "data": [
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/df8c296ccf8f78af57901d213c24d5a7.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "ZB133TF-W",
+                        "desc": "TNT平板显示器",
+                        "price": "￥1499.00",
+                        "id": "100064801"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/df8c296ccf8f78af57901d213c24d5a7.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "ZB156UT",
+                        "desc": "TNT平板显示器",
+                        "price": "￥1599.00",
+                        "id": "100065001"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/df8c296ccf8f78af57901d213c24d5a7.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "ZB156TF",
+                        "desc": "TNT平板显示器",
+                        "price": "￥1999.00",
+                        "id": "100064901"
+                    }
+                ]
+            }
+        },
+        {
+            "goods": {
+                "title": "坚果Pro3",
+                "data": [
+                    {
+                        "imgUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCACyAO0DASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAwQCBQABBgcI/8QAPhAAAgEDAwIEBAQCBwgDAAAAAQIDAAQREiExBUEGE1FhIjJCcRSBkaGxwQcVI0NS4fAkM2JykqLR8TSCsv/EABsBAAIDAQEBAAAAAAAAAAAAAAECAAMEBQYH/8QAMhEAAgIBBAECAwYFBQAAAAAAAAECAxEEEiExQQUiEzIzUWFxkbHwFBUjgcE0YqHR4f/aAAwDAQACEQMRAD8A9DLHfc0nPnBpkHINAm+U1YhUUU2oOaGCaNcfMaGgqIfA9Zg7bnmrqLIA3P61VWa8VcIMYqSAT39TUSd6kTgUEuM81mnPaWRjkMuaMM0uj0YNRTyHGAgNbyfU0LXvW81CYwYxO9DJNSZuaHk0ckJZODuf1pebJBo4yRQpRs32p0VsThz5nPerSPOBuf1qqTIk/OrSI5FFkiEb7ml3JHr+tNEDFLyjY0mQ4A+YfU/rWeYfWhnIzQyxFOhRjzd8ZNS8w+tV3mnXii6yaOAZG2kPqa0HJ7mlWcgVONs4pXwQa1H1oMrHB3NEBoMvBqBKu5Y55NLZo9zksMUDDUclqSwXy8UOUbGiqCAahINqYpKK4X4z961GBtTFwvxH70AU2CORY2uNvvVqhGBVLasc1bxnYUJETCudqTc7023FA0am4qicMlkZYJwg4FNAUONcUcAUqWB+wWN6lxUsVoqc7DeiQhithM1yXiPx30joUstlbx/j+oxkrKiSaLa2fgrLKoJLDuqj2JB2rlU/pU64rZl6b0ox54RbpDj/AJzI3/5ptoD1nTQZF2Nc54e8d9E67JHaSIbHqEhxFDM4khuD6QTAD4v+EqD6ZrqHAwajygYK7Rh8+9PREUuwwaLEaClkMo4G6G6gg1IHbmsNQUVdBvSco05qxcbGk51zmnixWitzmWnY1zSwibzM0/EuBTSFRhiyKksQFGAzit6arYQenFCkGRTJGBS8pwKZEK6WNSd6EUWjSuoNALjNQOS6A5oUg2o3rQpODViKyputiaT1703ebZquLb0+Q4yWNqRmriLgVz9q+Gxmr2FthQfQOhrGRWgN6wHathhVbGQVBU6GrCp5FVliJj/xXnvjnxqOmrP0bpEueoMDHe3UR/8AhgjBhhYf3p+o/T2+LeMvjfxqvSEl6T0uUHqbroubhCD+CVh8iY/vT/259ePG2LMSzEliSSSSdzudz+9FImTa85O5/YfaihJJPM0gnQmtiT2yFA37kkADvQRWxK8bK6HDIdSn0PY/cdqg3SIB2VsjIIbOASNwc5BHBFet+DPHC3y2/R+ryYvMCKzvHIAuscRzE/3nYH6vv83l8kUFz5JtEczvsYFyzlVGWeQnbOcAYJzztxS2hhuM87jjOD/Gi8dMVJ+D6PdsE+5okZrzrwj4wN4IOldWl/2zaOzupDj8T2EMxP8Aef4T9XHzfP6DEeM0sY4Y0pDgb3qWqly+KzzR61GCPIZjQGXNb8wHvUS49aKBIgIxmiqMVDWM81LX70whPNZq96GWrQOaBAhbalZicGmO1Bm4NEhTz51UPLUecDVQcUwS+BzmtOCQanFHI4yqsRkjIG361uRHUEMpH3BqZ5K0Ud6OfzqqJ3NXN6uzVSMME0SxDFucOKvrdtlrnYCfMWugthstQEh3OAaE0uDzRD8ppCfOeaViZwPRzAjmuU8ZeMl6LHJ07p8gPVpUxK4wwsEYbEjjzT9I7cnsCp4k8UjoULWtoyt1aVAVOzLZIw2kYHYufoHbk9g3lEjTTPJNM7PJIzO7OxZizHJZmO5J71XjBcstcEXeSR3kkZmkcszMxLMSxySWO+T3NYkckjBEXLH9APUmtHaus6V0rp39XJO0od7nSrzrgeVLgkRAHcBd87b/AKYLTaeC+mMHOKszjzg5e4gktyAxDKeGXjPpvSzV2F6gjt06dcW8WmN2lW6XI8yIljkbe+59gO2/JyBA7hCSgY6CRglc7E1TVNy9r7Ru9R0caNttT9kuuf3++AlvJLC6yRO0bgEBkOCM80T3O+STQU7UUE1YzBDo0yZ3HPf3r0vwd4y/EGDpPWJcXXwxWd5Kcef2EM7H6+yt34O+7+baqi4B3HP8aKYJxT6PoaaQqDntsarJL7S2M1x/hXxeblIekdXl/t/hjsbyVv8AfdhBOx+rsrHng77t0M8Z8xgdiDuO47b1akmZZNxZbxXJdQQaJ5vvSVsoCimCNjUxgKbZJbj4iM0dZeKr4wPMP3pkbVCZGy5xzU0OaVBO1Hj7VCvPIx2oMvBoval5zsd6UtRWzEBqCWGayZjr5oeTRwOpFpb+MulyELJFJEp2BBDAD1wKvLfqHTbxcwzxSA8qSM/Yg15KItieCc/kaGGuIWDRO6MpyCpIOR3BrztOvti/fye11HoOmms1Nxf5o9cuOm2dwDkFCc7odv0O1U83hqYkmG5jb2kRl/dc/wAK46DxR4gtCM3LSKPplAYH9d6vIPG5MI86ICYDGV+VjtviujHXw85Rw7PQ9TH5MS/AtIfDVyjBnuoRjssbt+5Iq0j6W0Yx5yt/9CP5muZHi9m31IPuQP2pqDxRnd5Ex9xU/mVXkSXomqistF7LayRozZUgDfGcj9a4rxX4kg6FEYYCj9VmTMSEaltUYbSyj/EfoX8zt8x+uf0gW3T7eaO1RJb91ZYg2GjjJ28yQe3Yd/tz5FPLc3k811dSPJNNI0sjyHLM7blmPrWqu+NkN8ejmT00657JrkDI808sk9w7STSu0jtISzFmOSzE8k96iRRVjdiwRHcqjSMEUtpReWbA2A7mh0c5LduOAtrJAheOeNTFNpWSQKDKiA5Ogmnra4uui3AlhIltLhUaWLUHUo+SoYgaQ4HBqrIqfnz+T+H1nydfmaNsavvzRUgbR/q3Vn6g+mNTFap8iHGtzjGqQ5P5DOB7k5NM/NG9ab6Z0x+pXBDM0dpAUa7mUbhXOFjjztrbBA9ME9tw5KKcpAcXLEVyJIGwpIYBtWkkEK2nY6SdjjvU8Gu5vraCaGO3aMfgljVLeGMhfw4TYeSTww7nvnfOa5S+6dPYtGWKyW8pbyJ0GFfTuUdTurjbI98gkHNWbN1UboPMX5M9d8XZKiSxKPh/qIEGomiVE96rNTIOEXSF3BGGBwa77wx4mW6/D9M6rN/b/DFZXkp2m4CwXDH6uyMeeDvueA44wM1oHGRyDsQe4p4topmk+Ge/xRMowRuNiDsQfei+UxztXCeDvGKsYOldZl3OmKzvZTuewhuGPfsrH7H1r00RCnbKcYKhLeQMSaIYz6VZ+UvpUDEN9qmSYEgpwKOn2qZj3rYWiJt5M3xQJuDTJxS0/BpRynl+fihkiiy7tQipqxAKdINWfbsc/wAKn+CzwMmrCKJV3bADZ37DG+9O+RtgY9zjmvI10ZXJ9Dnqmmc1N08nO2ftzQF6a57bV1ht4BvnGB8Wog/pQmlsYzp3ZsHKorMxHqAoNXqrHkEdZ9iKGLpTHBxvntVP1vqdl00S2luyy3mMSEbx25PZjxq9u37VbeIetzdOtBuLa5uUc20Iw10UzpE0oOyp6ckn0wSPO44nmYzS5ILFhq3LMTnJNaa9NH5rOjDqfU7Jf06n7n/wRHmSsZZSSWJbfkk9zRo4nmkiiTQHlkSNTI2lAXYKCzHgetbZaJFA0xkClRpQsdRxntgCtqnuOK6tvfZ3Np0qz6RbC3DFri4B/FXAIR8AYaTfhFzgDPfuTVB1voYBkvbLLKyNPNEqswABAaSNgMY3yRnbB+wa6N1ojy+ndTkePy3T8NcvpDxOh+FJtYIwPpJG35ZG+udYhCN03pz5iUFLm5VixkznVHGx7H6m7/bnU5RcTJsafHZxxQ1HBpor7UMpzVCkXbBZtqZgfqfTTbX0LBEmDDGQ6SR5wUnj40n3/YjYEgxmsjubmOGe3R8RTYEi4B2BzgE7j3q2PK5M01h8HcWd9ZX9lLcCRIVt1D3STNk2rcc/MVbhSBk8c8811TqYvGWGBDHZxOXjVgPMlkI0maYjuRsBnAG3qTVrwK2SACScAc0lMfgwdUH7W84BOuNlv8RJe7GMmVEire1t7CzJfq1pc3Mrx/BZwv5PkK65DzPgtrxuq42777KjcW6KouLdpHs5JGijeRQsiSAavJmC7B8bjGxG47hXwN94me9bjhkl16ADpxsSAWJ4CjueT9ga0e9aGQQRyPzpkVsiD9sEd9wRXpngrxt5fkdI6xN/Z/DFZXcp3Q8CGdj27K35H1rz5vLu2nlkaGCRY49IGQszgHJIOTk47etLA4/z7+xoiNH0zqHrUWYV5f4O8Z6Ut+j9VkOAwisbyRvlB2EE5P8A2N+R9R6IZGpkslb4DM6itBqQlnwcZokEmojemwLnkd5FLzIcGnFXYVGRRilTGKUxZYk1nlj0o8hCsaXaUZNOAVmVQjZxgZP610HR+lxQ2itcRh5ZyJSsm/loflQZ9uf8qU6fYicPfXEeu3j1GCHvKV5c+w+kd+fuhcdWlhldIpnMGstCWO4Hoa4UMU4sms/YepsjZq80Uvrv/o6r+r+m5J/CwE+6A/sa57xTf9B8P2LXDRoL2QMtjbRsV86T/E6j6B9R/Lk1T3/i+Tp1tJdzvqaTKQQg/FM6jGAeyj6j/M15tc3XUeuXkvUeoytI7nAzsoUfLHGvAUdh/M5Oyu+Mo70sI5d2kuhYqpSyxeRrvqVzNfXsjSSTNrZm+rGwAA2AHAFHwBgbAcDtRdIGkKPRVVRuSdgABVvbWsVrFLI72pudILif4kVW5giBBUsfrOfYepFNVutsxHhfb4Rpstp0FeZct/mygZDUBqRlZSQynII5Bq4urJQnn26sIiAZImyXhzwQTyh7H8j6tWsntVVsLNPY6rFho0Vyr1NatqeUwTl5Hd3JZ3OWJ7mtYomn2qJH7VFPIkq8BLe3WcytJJ5UECa5nC6m32VEXIyx7b0dLKzulf8ACm6icFY0a88jyZZW+WIMmMO3YYPvistXkjFxAJPImk8qSFnyi60z8DHtkHbP+YbkWeVenSXbCCK1m86csybhGWQeUqHdm42Hb/q21qLjyc62UoywjmpVYFlIwVJBB5BBwQaEq701dSedPcS6dPmyySY9NTFsUBRvUQskS07VuKR4JoJ00eZDIkqCRQ6akIYalOxFTxtRbaY27v8ACCkq+VLspbyyckIW4z/r1AzyNt4HW/HdSvLu+srd5vPkEtxBGwaW3lbnZiCUJzpP5HBG9pFFa9G6Z1H+tESR+ouD+DDqXZ0GFAZcgacku3bIA345+K6mtLh5rJniUsQEJLK0erIjlB5HqDQ7u5ub2d7i4YNI2AAoCoijhI0GwUdh/oupJc+RZfElFVt+1ChWolaMFJIABJPAHNbMbAZxkDnBBx98USpoANiDgHBBwQCDjfcGrKK1g6iHFpCkE0URnuDJK/luc6QsKbnHck7D7blDTU4pJoJEmhcpIh1Iy8g/ntRyLgFJFLE7xyIyPGSkiOMMCOQwr13wX1eXqnSDFcMXuenOtq7t80kJXVE7e+Mqf+X3ryUiWWTJLPJLJuzEszMx3JJ3+9el/wBHFrILXrt3jEM11BbwnGzeQrs5H/WB/wCqKfIklxydLdZDCj2Bok8Ic8VK2hCn2q3PBmxyWikYH2qErAA1JcAChT7g1UWFXMcscUoynJp4puc1AxjParEDIzN1tLO6khwGhjcBdO3wkA49K4frN/Z2z3k7sVti7tAi4DyM24ijB/c9h+hF1HqUVpHLcXDHDbRoD8crqOF/ma5UC66nO11eEhBtHGNljXOQqj/X61wpN2Ldb8q/eD2CcdH7KOZtY/8AWBc3XVbg3NzlYx8KIM6VQcRoD29f/Jp7QFUKBgAYAGwFMJFnAUYUDAA7CmBatjg1ls1G9/Yl4DXT8Pl8yfbEohPGxuIk1CL58jK4YaSD9/bin0ijuzC9ujyIXGEyTJby4zpkA237NjB9sYrSwzRNqT1GVO6tj1FA8meMyMjMhkVkfQSoZG5Uhe3tXQ0fqMtMsLleUc/W+nQ1fL4l0mFu7oKhtoZPMIQwzTg5BTOryYT/AIM8nv8AbmsZabEDelbMKqhklcRxhtGoqXZmxnSiDc++4Azzvvnv1Vmruc5ctm7TaWrR0KEeEhBlqGk7Y2IOQfSnjDFIHMMhdowzPHJGYpQq8sFywIHffPt6AKYFT3VvElgZKFq3QeURuJ/PjjDxL5wYmSbJ1OMYC44AH+ud0mXmmmFRVNTCtMZNsyTrS6K+QYySDVnB0WR4ZjJI0d0mg+WygRQ6vljnc8M3bsOD30s2L2lneQXFzCJY4zkZ38tu0gXuRV9dNazCCRXWa8MRm86JNMBjYkxmZFJBx2+3ptW6GxLM2c2yFjmo1rJxbxyRs8bqySIxV1YYZWHYihkVf9VELwLJPrW7GhYi+DJKAcOHxyg+lvy3Hy0eKqksPBbW90c4BYrWKNprQAyM5xkZxzjvjNBAlEHjEbkc6lBI504NHeadha27pgx6Rho1RwWPGRvj70W6jt42jltZP7OQErGSTImnHzH/ADpeSaaVtbsS5GCx3bGMc1trt2Vyjl5f5GCylzmnjhAXVQ8gU5UOwU+oycVHT6ZomOABVt0Tod31ifCZjtYyPPuCNgDvpQHknsPz4+annwWPEeyPQ+hX3Wbrybb4EUD8VdMNUdtE2x0+rsMhR/Ab17LY2dn02ztbG0TRb20YjjB3Y75LMe7E5JPqarrCCz6bbxWlnEI4U39Wdzy7t3Y9z/4wHBcE4FWJYM0p7hl8GtpgEUt5prDKRTFecFiGqDkYNKJM2MVIyE0oQbnBPvUSwqTAmhEGmQDyD/bOq3Jurr4QuyRgYWFeyqp7/wDs71ZLH8kca9wiKOSTsBRFiSNQqgBRwBUnR4jHNE2dLKVfGwcb4Oa8nO93S/2o9tXQqI95kyytejXxyW8leMAyE5PpsKZ/DNGxjdcOpwwp3pd2lyigjTMo+NP5r7US7Ie6kO2wRdvZRzWnVUUwrVlbyYqL7Z2OFiEfw6ntWmtFPanVWphK56NeSs/Ar6UvedMMkURAOmMSK4H0l21avz4/Kr5FwQfejFVJDLlWxvg9z9q0Uz+HLcV2p2R2HLRWIluknMbiRZRNM4YGPSPmypXOW4570tL09hnC117JkYJyM5xwM+u1CNup7ftVt17sa+4FEFUn95xTWEm+1QFm6NkjtXbv08Bc4BI+cDlfv/Okbm0QKxAHFWRlOE0pLA+6E1mPJzJWGeP8NIVjkxpgkJCIpJyTIeT7VXQXUloZI8CWL4woDsq5znYjfSeSP4GnL9cM496rdO9bnNSWGZvhyhLdFmSyTTyNLKxZ2xvwABsFUDYAcAVpY3YhURmY8KilmP5KM0WKPUcV2fS7T+r+nR3sUYdpYllmA2Z9ZxjI3wtPXib58FNuYJYWWziGjdCVdWVhyrqVYfk29QK+1d9c2cPUemyTPFpmVHljJHxIyncAnfBrmj0uT0NNLEH32VRTllNYaKQrUdBJ29CTwAANySTtj1q6PS3Ad2KpHGpeWSQ6Y40HLOx7VZ+HvC8vXZvMKywdHicebM66Zrt130op49h9PJy2yvB7+ii32LLK7oHhu663KT8UdhEwFxcFf94efLjB7/8As9lb0yDp8FnBHbW0QjhiGEVd/uzE7knuaureytbWCG2tokighXRGiDAUfxyeSe9TMI9K1RWDlzm5FH5Dj1qQgfI2NXQt19K3+HX0otiYKkRN6GsMZxVq0IFAeLmgmBorvloikVuWMjNCVj3qNhXQY71rSK2DtWiaRyH4PMWetRvhhkZQn4l9jzj3peOZJlDxnKn9vvR4xkivF81v7z6BOKnwy2gVAUZG2IyAM5X2JqxjIquthsKsolY7gcVXv3MzSiojcKGQ42AUanY8KvqaYeAIA6nXGfqxx96jG6/BGFxCwAcnnWeS38qbjAgQocNHk6d8ls9q7UdLFVZb8ZycyWoluwl/YVCe1SwaIAKwiufFmkHjNEiC5x9X0/5e9aIqRClfQj9/titFVmyal9hXYt0XEPpXAwMe9VXUkSNcggagTpHb3+xp8TMFIYZbsTx+dVV+WZXZiSTnJPeupqNVXbFKK5/QzaWicJtt8HGXwy7/APNVcRvVncqzu4RSxGWOBnA4pDTvWWMn2ddwWOBmwSBpWWXVll0xnUFVXPdye3+vt13Tp57VVgdPMhBzHglTg7/Dnsa5WzhLOPuK6y0hOlc5OAB+VMrWuY9mW6tdSLCWX8SpVY9CNjVk5LY7cUrLHawxyTTMkcMalpHf5VH+uB3ozyQ28TyyuqRoMszb47YAG5J7Cg9M6bL4juTc3gki6TZyjyoBkNPMBvqYbZH1Y+XOBvkrfBSulyc6yyNEeBOw6Nf+JpPObVZdGhk/sAyAy3Ein/eFT8JYfTnIX/ibOn0W1trezt7a0t10w28SxRgnJ0r3JO5J5J7k1ONI4kjjjRUjjVUREAVVVRgKqjbFSziupCCgsI4tljseWTAFbwKjqreqmKyWBWsCs1VomgMmYQKE6Ag0XJrRqAYhLFnNIvGVNW8i5zScsec7UreBWhQGsJ3qRXFDPNVN5AeQdPgmQtI+VVxgKdid+SKtE2IoS03bW7zMcZ0KMswGfyA7mvKz36ieIrln0GVsa45k8Iftd8flVrFtgjf27GkIYJIW0OPsexHqKsYwdqwyUq54fDRVKUZxynlDS4GHXHYFT3/L0owZmbJx6ADgD0FLrTCdq1KyUo7fBkcUnnyEreAeKi2wH3qYIx9v3rs6P09XVb2zn3al1ywkaxUWqec1Eg71hnXsk4vwa4S3LIOq2+BKlRyxwM1ZVXXwWSNk4ffH/F7U1ayyxPBRakhcx2kMd1cq58+UzrDb27shwDKoJ144wMLnnJpKeBJ7WDqK4QXCo6hiMy52Jwu2ofUQMHnYnBG/mRStDJJKlszO1xHDhXnGkjytY3AbbUR2qEs8s7h5CoCqEjjQaY4o12VEXsBXVvvpVO2PP+CnTae96j4knx+o1YL8a49a6QTRW0BllbSqgZOCSSdgqgbknsK560kgt45Z53CRRAGR8ZwTwqjux7CrHw3cWnXOrIL+Nlt0D/gbcNldQH96RyTvnH24+bHRXueX0Xayx5agstDUFpfdVljmkjZYEOYIeQvbWxHLHue3A9T39nCLaztLcAAQxhcKAACTkgAbVNIoYwBGiqBjAUAY+1Ers1U7Hk87fqFZFQS+/PlmVqt1laDGRzWZNYa1UAbya3mo5rM0CE8mtZNazWUGHJo0J12o1Qbg1W1khXzDFLE709MuRtSJRgaVIVs8zIAkIHGavrEL5cOw4zx61lZXG9K+tL8P8nqPVPpxLNwPKzgZDjB/KsjA2rKysPq/+p/sWaD6CGFAwKOgGRsORWVlY6+0aJ9BnA+LYd6EOP0rKyvVel/Tl+JxtT8yDED0FawMHasrK4c/mZ0I9IC4GeBVVf8AyPWVlGHaL15Od6kBqi2+g/xqu7/pWVlPP6jNlP0l+An1MsLbo4BODDdyEZ2L+ZjUR61b+Hfh6l07Tti4h42+oelZWV0n8kTJofmt/BntWB6CtYHpWVldc8cbIG2wrWB6VlZUIawMHatYHoKysqANYHoKzArKygQzA9K3gegrKygQzA9BUSBvtWVlQICQD0FJuBqOwrKygVPs/9k=",
+                        "name": "锤子坚果Pro3",
+                        "desc": "锤子坚果Pro3，搭载高通骁龙855Plus处理器。后置4800+1300+800+500四摄，前置2000万单摄。",
+                        "price": "￥2899.00",
+                        "id": "1000602"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/9368c948ea81a5b8bc2efa165488ccc6.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "坚果 Pro 3 足迹保护套",
+                        "desc": "这一次，两面都有好故事",
+                        "price": "￥49.00",
+                        "id": "100060401"
+                    }
+                ]
+            }
+        },
+        {
+            "goods": {
+                "title": "移动电源",
+                "data": [
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/33954b3f6a2f1614c5482ef130af9cc8.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "坚果“电池形电池”移动电源",
+                        "desc": "别具一格的“全能型”移动电源",
+                        "price": "￥29.00",
+                        "id": "1000422"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/2d106f8a751539abba6f446d3cda7818.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "坚果快充移动电源 ",
+                        "desc": "可支持苹果手机快充，小巧便携，多重安全防护",
+                        "price": "￥99.00",
+                        "id": "100059001"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/de1274f4c70fe3768417bb0454320089.png?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "坚果快充移动电源 20000mAh（45W MAX)",
+                        "desc": "“充电狂人的大满足”",
+                        "price": "￥249.00",
+                        "id": "100065501"
+                    }
+                ]
+            }
+        },
+        {
+            "goods": {
+                "title": "坚果Pro2S",
+                "data": [
+                    {
+                        "imgUrl": "https://2b.zol-img.com.cn/product/192_320x240/219/ceCjtOiN8Awzw.jpg",
+                        "name": "坚果Pro2S",
+                        "desc": "6.01英寸，2160x1080像素，3600mAh/八核",
+                        "price": "￥1149.00",
+                        "id": "1000517"
+                    }
+                ]
+            }
+        },
+        {
+            "goods": {
+                "title": "手机",
+                "data": [
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/2f2afca6f88e3aef5b1f332ea0c1d65a.png?x-oss-process=image/resize,w_342/format,webp",
+                        "name": "坚果 Pro 2S",
+                        "desc": "双系统，无限屏",
+                        "price": "￥1,998.00",
+                        "id": "100051701"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png?x-oss-process=image/resize,w_342/format,webp",
+                        "name": "坚果 Pro 2S",
+                        "desc": "双系统，无限屏",
+                        "price": "￥1,998.00",
+                        "id": "100051701"
+                    }
+                ]
+            }
+        },
+        {
+            "goods": {
+                "title": "充电器",
+                "data": [
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/a668d1a5f41b04ece82d76ded1e94d3a.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "坚果 QuickCharge 4+ 快速充电器",
+                        "desc": "全面兼容的 18W 快速充电",
+                        "price": "￥49.00",
+                        "id": "100047001"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/dc53bd870ee64d2053ecc51750ece43a.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "Smartisan 原装快充充电器 18W",
+                        "desc": "18W 安全快充",
+                        "price": "￥39.00",
+                        "id": "100026701"
+                    }
+                ]
+            }
+        }
+    ]
+}

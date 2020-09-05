@@ -1,0 +1,167 @@
+{
+    "data": [
+        {
+            "cp": [
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/25cd192a66e0dbd0f12dd723d1ea53f2.jpg?x-oss-process=image/resize,w_270/format,webp",
+                    "name": "地平线 8 号 全功能城市背包 Atlas X",
+                    "desc": "一款通行城市的全功能双肩包",
+                    "price": "￥299.00",
+                    "id": "100058401"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/d9586f7c5bb4578e3128de77a13e4d85.png?x-oss-process=image/resize,w_270/format,webp",
+                    "name": "Smartisan T恤 皇帝的新装",
+                    "desc": "男装",
+                    "price": "￥149.00",
+                    "id": "100057603"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/fc092e830c0420b5d8db2871fec82b35.png?x-oss-process=image/resize,w_270/format,webp",
+                    "name": "地平线 8 号旅行箱",
+                    "desc": "简约设计、德国拜耳 PC 箱体",
+                    "price": "￥29.00",
+                    "id": "100053314"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/66b25ef2a60c262b6c2de2e2b60acb09.png?x-oss-process=image/resize,w_270/format,webp",
+                    "name": "Smartisan T恤 红白机",
+                    "desc": "男款",
+                    "price": "￥149.00",
+                    "id": "100057220"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/c892f825c80767c2bef15081352d2aa4.png?x-oss-process=image/resize,w_270/format,webp",
+                    "name": "Smartisan T恤 丑小鸭",
+                    "desc": "男装",
+                    "price": "￥149.00",
+                    "id": "100057708"
+                }
+            ]
+        },
+        {
+            "chx": [
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/71432ad30288fb860a4389881069b874.png?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "畅呼吸智能空气净化器 · 超级除甲醛版",
+                    "desc": "超强除甲醛能力，超低噪音，智能操控",
+                    "price": "￥2,999.00",
+                    "id": "100040501"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/6ff92d05a3bfab4fad489ca04d3eea5a.png?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "畅呼吸智能空气净化器 · 标准版",
+                    "desc": "超强净化能力、超低噪音、超长寿命",
+                    "price": "￥2,799.00",
+                    "id": "100033802"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/4d83d72c5ecc288e8d5ddd9d06b80f99.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "畅呼吸除甲醛超级活性炭滤芯",
+                    "desc": "家装等场景适用的专业除甲醛超级活性炭滤芯",
+                    "price": "￥599.00",
+                    "id": "100036401"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/00eee903962f17d75950397843117e6e.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "畅呼吸除霾除甲醛高效复合滤芯",
+                    "desc": "精选双层防护材质、过滤更精细、去味更有效",
+                    "price": "￥699.00",
+                    "id": "100036501"
+                }
+            ]
+        },
+        {
+            "gfpj": [
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/d4480234a2f24b0ff5acd98288fd902d.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "Smartisan 双口 &amp; 快充车载充电器",
+                    "desc": "铝合金机身、双口 &amp; 快充、智能调节",
+                    "price": "￥79.00",
+                    "id": "100023501"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/33954b3f6a2f1614c5482ef130af9cc8.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "坚果“电池形电池”移动电源",
+                    "desc": "别具一格的“全能型”移动电源",
+                    "price": "￥69.00",
+                    "id": "100042203"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/8a875418797690e26b665cc0d86dffc7.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "Smartisan 半入耳式耳机",
+                    "desc": "经典配色、专业调音、高品质麦克风",
+                    "price": "￥59.00",
+                    "id": "100042803"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/82aab62886740f165a3631ce6cffe895.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "坚果彩虹数据线",
+                    "desc": "七彩配色随机发货，为生活增添一份小小惊喜",
+                    "price": "￥19.00",
+                    "id": "100053001"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/c44f0ab4da5591fc3d0f82b7ac0f4f65.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "坚果砖式蓝牙小音箱",
+                    "desc": "一款设计出色、音质出众的随身音箱",
+                    "price": "￥149.00",
+                    "id": "100052803"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/f319b26eb69e8ba351423abfad347eae.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "Smartisan 快充移动电源 10000mAh",
+                    "desc": "10000mAh 双向快充、轻盈便携、高标准安全保护",
+                    "price": "￥129.00",
+                    "id": "100055302"
+                }
+            ]
+        },
+        {
+            "phone": [
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/2f2afca6f88e3aef5b1f332ea0c1d65a.png?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "坚果 Pro 2S",
+                    "desc": "双系统，无限屏",
+                    "price": "￥1,998.00",
+                    "id": "100051701"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "坚果 Pro 2S",
+                    "desc": "双系统，无限屏",
+                    "price": "￥1,998.00",
+                    "id": "100051701"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/dc53bd870ee64d2053ecc51750ece43a.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "原装快充充电器",
+                    "desc": "18W 安全快充",
+                    "price": "￥49.00",
+                    "id": "100026701"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/8d8f9a1e239f8fcd2308776f49ba09f6.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "坚果“电池形电池”移动电源",
+                    "desc": "别具一格的“全能型”移动电源",
+                    "price": "￥39.00",
+                    "id": "100047101"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/8635cb91f2cdbbc5576e069c52b99412.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "坚果 Type-C To Type-C 数据线",
+                    "desc": "TPE 环保材质，PTC 过温保护",
+                    "price": "￥19.00",
+                    "id": "100026801"
+                },
+                {
+                    "imgUrl": "https://resource.smartisan.com/resource/45312fb748d54aa2e58a8f4d637e9e65.jpg?x-oss-process=image/resize,w_342/format,webp",
+                    "name": "Smartisan 耳机转接头",
+                    "desc": "即插即用、全面兼容",
+                    "price": "￥69.00",
+                    "id": "100042206"
+                }
+            ]
+        }
+    ]
+}

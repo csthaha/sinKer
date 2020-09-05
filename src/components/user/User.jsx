@@ -1,9 +1,26 @@
 import React, { Component } from 'react';
 
+import { Button, message, Modal, Drawer, Input } from 'antd'
+
+import Avatar from './uploadImage/UploadImage'
+import store from '../../store/login/store'
+
 import '../../base.styl'
 import './User.styl'
 class User extends Component {
-    state = {}
+    constructor(props) {
+        super(props)
+        console.log(store, store.getState(), '+++++', props)
+    }
+    state = {
+        visible: false,
+        imgUrl: '',
+        drawerVisibal: false,
+        name: '',
+        passwordVisible: false,
+        inputval: '',
+        nameOrPassword: ''
+    }
     render() {
         return (
             <div className="User">
@@ -11,81 +28,119 @@ class User extends Component {
                     个人中心
                 </div>
                 <div className="user-content">
-                    <div className="user-content-head">
-                        <div className="avatar">
-                            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3893146502,314297687&fm=27&gp=0.jpg" alt="" />
-
+                    <div className="message" onClick={this.uploadImage.bind(this)}>
+                        {/* <img className="avatar" src={this.state.imgUrl} alt="" /> */}
+                        <Avatar />
+                        <div className="message-name">
+                            <div className="name">昵称：{this.state.name}</div>
+                            <div className="arrow" onClick={this.modifyName.bind(this)}></div>
                         </div>
-                        <p className="login-up">登录注册</p>
-                        <div className="arrow">></div>
                     </div>
-                    <ul className="user-content-container">
-                        <li className="user-content-list">
-                            <div className="list-img one">
-                                <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3148303323,831087728&fm=27&gp=0.jpg" alt="" />
-                            </div>
-                            <div className="list-text">全部订单</div>
-                        </li>
-                        <li className="user-content-list">
-                            <div className="list-img two">
-                                <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=213312306,3162915871&fm=27&gp=0.jpg" alt="" />
-                            </div>
-                            <div className="list-text">待付款</div>
-                        </li>
-                        <li className="user-content-list">
-                            <div className="list-img three">
-                                <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1735947112,2880697954&fm=27&gp=0.jpg" alt="" />
-                            </div>
-                            <div className="list-text">待收货</div>
-                        </li>
-                        <li className="user-content-list">
-                            <div className="list-img four">
-                                <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3538336203,4046400367&fm=27&gp=0.jpg" alt="" />
-                            </div>
-                            <div className="list-text">售后</div>
-                        </li>
-                    </ul>
-                    <ul className="menu">
-                        <li className="menu-list">
-                            <div className="text">地址管理</div>
-                            <div className="arrow">></div>
-                        </li>
-                        <li className="menu-list">
-                            <div className="text">我的优惠券</div>
-                            <div className="arrow">></div>
-                        </li>
-                        <li className="menu-list">
-                            <div className="text">优先购买</div>
-                            <div className="arrow">></div>
-                        </li>
-                        <li className="menu-list">
-                            <div className="text">提货兑换卡</div>
-                            <div className="arrow">></div>
-                        </li>
-                    </ul>
-                    <ul className="menu">
-                        <li className="menu-list">
-                            <div className="text">常见问题</div>
-                            <div className="arrow">></div>
-                        </li>
-                        <li className="menu-list">
-                            <div className="text">服务支持</div>
-                            <div className="arrow">></div>
-                        </li>
-                    </ul>
-                    <ul className="menu">
-                        <li className="menu-list">
-                            <div className="text">意外碎屏保险服务</div>
-                            <div className="arrow">></div>
-                        </li>
-                        <li className="menu-list">
-                            <div className="text">延长保修服务</div>
-                            <div className="arrow">></div>
-                        </li>
-                    </ul>
+                    <div className="feature">
+                        <div className="feature-same modifyPass" onClick={this.modifyPass.bind(this)}>修改密码</div>
+                        <div className="feature-same address" onClick={this.addressManagement.bind(this)}>地址管理</div>
+                        <div className="feature-same order" onClick={this.goToCart.bind(this)}>全部订单</div>
+                        <div className="feature-same service" onClick={this.service.bind(this)}>延长保险服务</div>
+                        <div className="feature-same coupons" onClick={this.showCoupons.bind(this)}>我的优惠券</div>
+                    </div>
+                    <div className="btn">
+                        <Button type="danger" >退出登录</Button>
+                    </div>
+                    <Modal
+                        title="产品服务"
+                        visible={this.state.visible}
+                        onOk={this.handleOk}
+                        onCancel={this.handleCancle}
+                    >
+                        确认需要延长服务吗
+                    </Modal>
+                    <Modal
+                        title={"修改" + this.state.nameOrPassword}
+                        visible={this.state.passwordVisible}
+                        onOk={this.modifySuc.bind(this)}
+                        onCancel={this.handleCancle}
+                    >
+                        <Input type={this.state.nameOrPassword == '昵称' ? 'text' : 'password'} onChange={this.handleChange.bind(this)} placeholder={"请输入新" + this.state.nameOrPassword}></Input>
+                    </Modal>
+                    <Drawer
+                        title="优惠券"
+                        placement="bottom"
+                        onClose={this.handleCancle}
+                        visible={this.state.drawerVisibal}
+                    >
+                        <h3>满减五十优惠券一张</h3>
+                        <h3>3元优惠券</h3>
+                    </Drawer>
                 </div>
             </div>
         )
+    }
+    goToCart() {
+        this.props.history.push('cart')
+    }
+    uploadImage() {
+        console.log('上传头像');
+        // this.props.history.push('/uploadImage')
+    }
+    addressManagement() {
+        this.props.history.push('/address')
+    }
+    modifyPass() {
+        this.setState({
+            passwordVisible: true,
+            nameOrPassword: '密码'
+        })
+    }
+    handleChange(e) {
+        this.setState({
+            inputval: e.target.value
+        })
+
+    }
+    modifySuc() {
+        message.success('修改成功')
+        this.setState({
+            passwordVisible: false,
+            name: this.state.inputval
+        })
+    }
+    modifyName() {
+        this.setState({
+            passwordVisible: true,
+            nameOrPassword: '昵称',
+        })
+    }
+    service() {
+        this.setState({
+            visible: true,
+        })
+    }
+    showCoupons() {
+        this.setState({
+            drawerVisibal: true,
+        })
+    }
+    handleOk = e => {
+        message.success('以延长服务')
+        this.setState({
+            visible: false
+        })
+    }
+    handleCancle = e => {
+        this.setState({
+            visible: false,
+            drawerVisibal: false,
+            passwordVisible: false
+        })
+    }
+    componentDidMount() {
+        let accountList = store.getState()
+        let avatar = accountList.acountList[accountList.acountList.length - 1].avatarUrl
+        let name = accountList.acountList[accountList.acountList.length - 1].name
+        this.setState({
+            imgUrl: avatar,
+            name: name
+        })
     }
 }
 

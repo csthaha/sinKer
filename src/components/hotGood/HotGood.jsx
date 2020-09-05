@@ -12,6 +12,8 @@ import Cart from '../cart/Cart'
 import * as icon from '../../images/img'
 import './HotGood.styl'
 
+import {message} from 'antd'
+ 
 import store from '../../store/store'
 
 
@@ -75,12 +77,14 @@ class HotGood extends Component {
                     <Scroll onScroll={this.scroll.bind(this)} >
                         {/* 图片 */}
                         <div style={{ width: "100%" }} ref="headList">
-                            <Scroll onScroll={() => { }}>
-
-                                <div className="good-container" >
+                            {/* <Scroll onScroll={() => { }}> */}
+ 
+                            <div className="good-container" >
+                                <div className="good-container-scroll">
                                     {this.renderSwiper()}
                                 </div>
-                            </Scroll>
+                            </div>
+                            {/* </Scroll> */}
                             {/* 信息 */}
 
                             <div className="good-msg">
@@ -149,7 +153,7 @@ class HotGood extends Component {
                     <div className="add" onClick={this.addToCart}>
                         <span>加入购物车</span>
                     </div>
-                    <div className="buy" >
+                    <div className="buy" onClick={this.buy.bind(this)}>
                         <span>现在购买</span>
                     </div>
                 </div>
@@ -197,6 +201,11 @@ class HotGood extends Component {
         store.dispatch(action)
 
     }
+    //buy
+    buy() {
+        this.addToCart()
+        message.success('已生成订单!')
+    }
     // 渲染头部
     renderHeaderList() {
         const { headerList } = this.state
@@ -209,7 +218,6 @@ class HotGood extends Component {
         )
     }
     scroll(e) {
-        console.log(e.y)
         if (e.y > -492) {
             this.setState({
                 headerIndex: 0
@@ -285,7 +293,7 @@ class HotGood extends Component {
             })
         )
     }
-    选择版本
+    // 选择版本
     showChoose() {
         console.log('111')
         const action = {
@@ -294,7 +302,9 @@ class HotGood extends Component {
         store.dispatch(action)
     }
     componentDidMount() {
-        // console.log('---', this.props.match.params.id)   
+
+        console.log('详情路径：', this.props.match)
+        console.log('详情路径：---', this.props.match.params.id)
         const self = this
 
 

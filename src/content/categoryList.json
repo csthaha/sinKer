@@ -1,0 +1,108 @@
+{
+    "categoryName": [
+        "数据线",
+        "扫地机器人",
+        "TNT显示屏"
+
+    ],
+    "data": [
+        {
+            "goods": {
+                "title": "数据线",
+                "data": [
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/8e822aa7cbab24fec7eacf0bbb2f6526.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "坚果 弯头数据线（Type-C）",
+                        "desc": "“3A”大电流",
+                        "price": "￥24.92",
+                        "id": "1"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/834e8388b0017c457c98baa6545cdfb2.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "坚果彩虹数据线",
+                        "desc": "精选配件，限时直降",
+                        "price": "￥16.00",
+                        "id": "2"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/45312fb748d54aa2e58a8f4d637e9e65.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "Smartisan",
+                        "desc": "即插即用，全面兼容",
+                        "price": "￥16.00",
+                        "id": "3"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/834e8388b0017c457c98baa6545cdfb2.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "C-force  USB-C多功能转接器",
+                        "desc": "可以替换Switch底座的超便携4K视频转接器",
+                        "price": "￥168.00",
+                        "id": "4"
+                    }
+                ]
+            }
+        },
+        {
+            "goods": {
+                "title": "扫地机器人",
+                "data": [
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/b1ea23314be6d08474d8d3e9c7ba6e15.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "科沃斯扫地机器人 DN55",
+                        "desc": "智能规划，扫拖一体",
+                        "price": "￥2399.00",
+                        "id": "1"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/df94938d10ce86465e33e8c28b5ab8d8.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "科沃斯扫地机器人 DF45",
+                        "desc": "智能规划，扫拖一体",
+                        "price": "￥1699.00",
+                        "id": "2"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/69376ec9945e7cafa1fa393439c8835d.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "科沃斯扫地机器人 DH45",
+                        "desc": "智能规划",
+                        "price": "￥1799.00",
+                        "id": "3"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/b6db8976d3fe9a04b0a58dc82099838b.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "科沃斯扫地机器人 DK35",
+                        "desc": "智能规划",
+                        "price": "￥1699.00",
+                        "id": "4"
+                    }
+                ]
+            }
+        },
+        {
+            "goods": {
+                "title": "TNT显示屏",
+                "data": [
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/df8c296ccf8f78af57901d213c24d5a7.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "ZB133TF-W",
+                        "desc": "TNT平板显示器",
+                        "price": "￥1499.00",
+                        "id": "1"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/df8c296ccf8f78af57901d213c24d5a7.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "ZB156UT",
+                        "desc": "TNT平板显示器",
+                        "price": "￥1599.00",
+                        "id": "2"
+                    },
+                    {
+                        "imgUrl": "https://resource.smartisan.com/resource/df8c296ccf8f78af57901d213c24d5a7.jpg?x-oss-process=image/resize,w_216/format,webp",
+                        "name": "ZB156TF",
+                        "desc": "TNT平板显示器",
+                        "price": "￥1999.00",
+                        "id": "3"
+                    }
+                ]
+            }
+        }
+    ]
+}

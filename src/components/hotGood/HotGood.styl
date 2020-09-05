@@ -8,7 +8,7 @@
     z-index: 100
     width 100%
     height 100%
-    .hotGood-head
+    .hotGood-head 
         height 50px
         display flex
         background #1d1d1d
@@ -55,27 +55,22 @@
         height 70% 
         width 100%
         .good-container
-            position relative
-            box-shadow 0 5px 13px rgba(0,0,0,.1)
-            margin-bottom 6px
-            background #fff
+            overflow hidden
+            padding-left 0
+            padding-right 0
+            padding-bottom 0
             width 100%
-            height 40vw
-            display flex
-            overflow-x auto
-            // overflow-y hidden
-            box-shadow 0 5px 13px rgba(0,0,0,.1)
-            .good-slide
-                // width 3000px
-                height 100%
-                border 1px solid #f1f1f1
+            .good-container-scroll
                 display flex
-                // overflow-x: auto
-                flex 1
-                img 
-                    margin 0 auto
-                    // width 100%
-                    height 100%
+                overflow-x auto
+                overflow-y hidden
+                .good-slide
+                    width 36%
+                    height 7rem
+                    border: 1px solid #f0f0f0
+                    img 
+                        width 100%
+                        height 100%
         .good-msg
             position relative
             box-shadow 0 5px 13px rgba(0,0,0,.1)

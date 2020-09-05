@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom'
 import Home from '../home/Home'
-
+import {message, Modal, Button} from 'antd'
 import '../../base.styl'
 import './Cart.styl'
 
@@ -12,11 +12,12 @@ class Cart extends Component {
         currentIndex: '',
         choose: false,
         total: 0,
-        n: 0
+        n: 0,
+        visible: false
     }
     constructor(props) {
         super(props)
-        console.log(store.getState(), '+++++', props)
+        console.log(store, store.getState(), '+++++', props)
         this.caculate = this.caculate.bind(this)
         this.selectAll = this.selectAll.bind(this)
         this.storeChange = this.storeChange.bind(this)
@@ -38,10 +39,10 @@ class Cart extends Component {
                     </div>
                     <h3>购物车暂无商品</h3>
                     <p>添加到购物车的商品会显示到这里</p>
-                    <div className="login">登录</div>
+                    {/* <div className="login">登录</div> */}
                     <div className="choose">
                         <Link to="/index">
-                            现在选购
+                            <Button type="primary" style={{width: '100%', height: '100%'}}>现在选购</Button>
                         </Link>
                     </div>
                 </div>
@@ -63,7 +64,7 @@ class Cart extends Component {
                             </p>
                             <p className="desc">应付总额不含运费</p>
                         </div>
-                        <div className="btn" style={{backgroundColor: this.state.choose ? '#4682B4' : '#CDCDB4'}}>现在结算</div>
+                        <div className="btn" onClick={this.payMent.bind(this)} style={{backgroundColor: this.state.choose ? '#4682B4' : '#CDCDB4'}}>现在结算</div>
                     </div>
                 </div>
                 <Route path="/index" component={Home}></Route>
@@ -95,9 +96,30 @@ class Cart extends Component {
                             </div>
                         </div>
                     </div>
+                    <Modal
+                        title="选择支付方式"
+                        visible={this.state.visible}
+                        onOk={this.payOk.bind(this)}
+                        onCancel={this.handleCancle}
+                    >
+                        <Button type="primary">微信支付</Button>
+                        <Button type="danger" style={{margin: '0 2px'}}>支付宝支付</Button>
+                        <Button type="primary">银行卡支付</Button>
+                    </Modal>
                 </div>
             )
         })
+    }
+    handleCancle() {
+        this.setState({
+            visible: false
+        })
+    }
+    payOk() {
+        this.setState({
+            visible: false
+        })
+        message.success('支付成功')
     }
     caculate(index, item) {
         let self = this
@@ -132,7 +154,15 @@ class Cart extends Component {
             n
         })
     }
-   
+    payMent() {
+        if(this.state.total === 0) {
+            message.warning('请选择商品')
+        } else {
+            this.setState({
+                visible: true
+            })
+        }
+    }
     selectAll() {
         const action = {
             type: 'SELECT_ALL'
