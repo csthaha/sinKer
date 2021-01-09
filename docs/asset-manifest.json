@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8954aa3b.chunk.css",
+    "main.js": "/static/js/main.916214fd.chunk.js",
+    "main.js.map": "/static/js/main.916214fd.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.f23872c4.chunk.css": "/static/css/2.f23872c4.chunk.css",
+    "static/js/2.77a4ae93.chunk.js": "/static/js/2.77a4ae93.chunk.js",
+    "static/js/2.77a4ae93.chunk.js.map": "/static/js/2.77a4ae93.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ed75dc68808edaffc72b2a66679431ba.js": "/precache-manifest.ed75dc68808edaffc72b2a66679431ba.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.f23872c4.chunk.css.map": "/static/css/2.f23872c4.chunk.css.map",
+    "static/css/main.8954aa3b.chunk.css.map": "/static/css/main.8954aa3b.chunk.css.map",
+    "static/media/nav-logo.png": "/static/media/nav-logo.f28bcf8a.png"
+  }
+}
